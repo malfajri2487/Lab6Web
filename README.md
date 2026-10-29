@@ -12,55 +12,26 @@ Repository ini dibuat untuk menyelesaikan tugas Praktikum 6 Pemrograman Web.
 | **Dosen**       | Agung Nugroho, S.Kom., M.Kom. |
  
 ---
-## Tujuan Praktikum
- 
-- Mahasiswa mampu memahami konsep DOM (Document Object Model) sebagai struktur dokumen HTML yang dapat diubah oleh JavaScript.
-- Mahasiswa mampu memilih elemen HTML menggunakan `getElementById()`, `querySelector()`, dan `querySelectorAll()`.
-- Mahasiswa mampu menangani event (`click`, `input`, `submit`) menggunakan `addEventListener()`.
-- Mahasiswa mampu mengubah teks, class, dan gaya CSS secara dinamis menggunakan `textContent` dan `classList`.
-- Mahasiswa mampu membuat validasi form sederhana menggunakan `preventDefault()`.
-- Mahasiswa mampu membuat aplikasi interaktif sederhana (To-do List dan Form Pendaftaran Workshop).
----
  
 ## Struktur File Proyek
  
 ```
-Lab6Web/
-├── MiniProject/
+Project/
+│
+├── lab6_dom_event/
 │   ├── index.html
 │   ├── script.js
-│   └── style.css
-├── index.html
-├── script.js
-├── style.css
-└── README.md
+│   ├── style.css
+│   └── README.md
+│
+└── MiniProject/
+    ├── index.html
+    ├── script.js
+    └── style.css
 ```
-| File / Folder | Keterangan |
-| ------------- | ---------- |
-| `index.html`  | Halaman utama praktikum (DOM, event click, event input, validasi form, To-do List, eksperimen mandiri) |
-| `script.js`   | Seluruh logika JavaScript untuk halaman utama |
-| `style.css`   | Style untuk class `highlight`, `teks-besar`, `selesai`, dan `sembunyi` |
-| `MiniProject/` | Mini project Form Pendaftaran Workshop (HTML, CSS, dan JavaScript tersendiri) |
- 
 
-<img width="227" height="213" alt="image" src="https://github.com/user-attachments/assets/6cd67f16-3a57-4032-b721-bea9f18fa66e" />
+<img width="217" height="154" alt="Screenshot 2026-10-29 161050" src="https://github.com/user-attachments/assets/600835fd-7b64-4ac3-8955-2fe51afb00ea" />
 
----
- 
-## Cara Menjalankan
- 
-1. Clone atau download repository ini.
-```bash
-   git clone <url-repository>
-```
-2. Buka folder `Lab6Web` menggunakan **Visual Studio Code**.
-3. Install ekstensi **Live Server** (jika belum ada).
-4. Klik kanan pada `index.html`, lalu pilih **Open with Live Server**.
-5. Halaman akan terbuka di browser, contohnya `http://127.0.0.1:5500/index.html`.
-6. Untuk Mini Project, buka `MiniProject/index.html` dengan cara yang sama (`http://127.0.0.1:5500/MiniProject/index.html`).
-7. Untuk melihat pesan error atau hasil `console`, buka **DevTools** browser dengan menekan `F12`.
-> Alternatif: file `index.html` juga bisa langsung dibuka dengan double-click di browser tanpa Live Server.
- 
 ---
  ## Langkah-langkah Praktikum
  
@@ -68,24 +39,21 @@ Lab6Web/
  
 Membuat dokumen `index.html` dengan judul "Praktikum DOM dan Event" yang berisi `<h1 id="judul">`, `<p id="pesan">`, dan `<button id="tombolAksi">`.
  
-<img width="803" height="336" alt="image" src="https://github.com/user-attachments/assets/a58b1840-2d50-4f87-91bd-935a2fccf45a" />
+<img width="458" height="235" alt="Screenshot 2026-10-29 144621" src="https://github.com/user-attachments/assets/51f4eb56-bc86-4044-8509-4b8b775dcd26" />
 
 Hasil sebelum menggunakan `script.js`:
  
-<img width="436" height="256" alt="image" src="https://github.com/user-attachments/assets/f9cd16c2-953c-4315-af20-fb5f66f3a85f" />
+<img width="205" height="122" alt="Screenshot 2026-10-29 144601" src="https://github.com/user-attachments/assets/a456f4ba-a1a1-46e1-880d-893b10681dc5" />
+
 
 Kemudian dibuat `script.js` untuk mengambil elemen dengan `getElementById()` dan mengubah isinya menggunakan `textContent`.
  
-```js
-const judul = document.getElementById("judul");
-const pesan = document.getElementById("pesan");
-judul.textContent = "Belajar JavaScript DOM";
-pesan.textContent = "Konten berhasil diubah oleh JavaScript.";
-```
+<img width="434" height="89" alt="Screenshot 2026-10-29 144913" src="https://github.com/user-attachments/assets/45501bbe-6f48-4652-8eb9-3210b58bd74e" />
+
  
 Hasil di browser: judul berubah menjadi "Belajar JavaScript DOM" dan pesan menjadi "Konten berhasil diubah oleh JavaScript."
  
-<img width="561" height="314" alt="image" src="https://github.com/user-attachments/assets/fc966e59-eb2e-4ce5-a70a-10ce9cf5e870" />
+<img width="206" height="122" alt="Screenshot 2026-10-29 144818" src="https://github.com/user-attachments/assets/1c43482b-01c9-43a8-bb7e-6698d693d095" />
 
 ---
  
@@ -93,12 +61,11 @@ Hasil di browser: judul berubah menjadi "Belajar JavaScript DOM" dan pesan menja
  
 Menambahkan `addEventListener("click", ...)` pada tombol "Klik saya" untuk menampilkan waktu saat tombol ditekan.
 
-<img width="1078" height="129" alt="image" src="https://github.com/user-attachments/assets/872e74dc-87b2-4963-976d-e6a7d1de17f9" />
+<img width="508" height="76" alt="Screenshot 2026-10-29 145058" src="https://github.com/user-attachments/assets/9516048e-aac5-44ee-8538-4b2f47979ba9" />
 
- 
 Hasil di browser: setelah tombol diklik, muncul teks "Tombol diklik pada 18.34.36" (sesuai waktu saat diklik).
  
-<img width="486" height="252" alt="image" src="https://github.com/user-attachments/assets/d4c4d13f-d116-4d20-b0ef-8b3e6f51f884" />
+<img width="213" height="113" alt="Screenshot 2026-10-29 145558" src="https://github.com/user-attachments/assets/5954e103-cf95-4e4b-9d30-ab1173d93db3" />
 
 ---
  
@@ -108,21 +75,19 @@ Menambahkan paragraf `#teksGaya` dan tombol `#tombolGaya` pada HTML. Saat tombol
  
 <img width="729" height="157" alt="image" src="https://github.com/user-attachments/assets/b7aacaea-69d1-4594-b0af-288abef84fca" />
 
-<img width="753" height="185" alt="image" src="https://github.com/user-attachments/assets/369f19a8-64f5-4f28-9bea-7d2db4acdef8" />
+<img width="401" height="89" alt="Screenshot 2026-10-29 150605" src="https://github.com/user-attachments/assets/2ab8797c-278c-4801-8f77-6578f3f556cc" />
 
-
- 
 CSS yang digunakan pada `style.css`:
 -
  
-<img width="410" height="243" alt="image" src="https://github.com/user-attachments/assets/99b2e6b0-7da7-44c5-914c-f215aa8a1047" />
+<img width="268" height="144" alt="Screenshot 2026-10-29 150656" src="https://github.com/user-attachments/assets/da4bfb4e-ffbf-426c-9182-da44a92f41b3" />
 
  
 Hasil di browser: teks berubah menjadi bergaya highlight dengan ukuran font lebih besar, dan kembali normal jika tombol diklik lagi.
  
-<img width="337" height="104" alt="image" src="https://github.com/user-attachments/assets/c96b5c49-7fe9-4a99-8e93-3a12872ff804" />
+<img width="218" height="81" alt="Screenshot 2026-10-29 150101" src="https://github.com/user-attachments/assets/59724b2d-f662-46bf-8be0-a0d85e6e4465" />
 
-<img width="450" height="173" alt="image" src="https://github.com/user-attachments/assets/51c1b2ca-bd4f-4ae8-a162-b8cc6a960bc7" />
+<img width="210" height="101" alt="Screenshot 2026-10-29 150112" src="https://github.com/user-attachments/assets/ab8424b2-5f38-4f64-8fa1-1767227e9df4" />
 
 ---
  
@@ -130,91 +95,80 @@ Hasil di browser: teks berubah menjadi bergaya highlight dengan ukuran font lebi
  
 Menambahkan `<input type="text" id="namaInput" maxlength="40">` dan `<span id="jumlahKarakter">`. Event `input` digunakan agar jumlah karakter terupdate setiap kali pengguna mengetik.
  
-> Catatan: ditambahkan tag `<br /><br />` sebagai pemisah karena kotak input nama tidak turun ke baris baru.
+<img width="451" height="43" alt="Screenshot 2026-10-29 150502" src="https://github.com/user-attachments/assets/9d164492-70f7-4768-9c17-15dbedf5ea1e" />
+
+<img width="482" height="71" alt="Screenshot 2026-10-29 150410" src="https://github.com/user-attachments/assets/435b2a0e-9b34-47d2-b561-6912a86ee600" />
+
+Hasil di browser: saat mengetik "Muhammad Al Fajri", tampil "Jumlah karakter: 17".
  
-<img width="853" height="282" alt="image" src="https://github.com/user-attachments/assets/d2960d70-96a7-4688-aa97-2274f20cf60a" />
+<img width="213" height="101" alt="Screenshot 2026-10-29 150339" src="https://github.com/user-attachments/assets/f0a8240f-8b1e-4499-8b4f-3ea2c19b2d5f" />
 
- <img width="887" height="160" alt="image" src="https://github.com/user-attachments/assets/231e9456-6fd0-43cc-a184-1af707700970" />
-
-Hasil di browser: saat mengetik "Rafli Putra Sudrajat", tampil "Jumlah karakter: 20".
- 
-<img width="372" height="105" alt="image" src="https://github.com/user-attachments/assets/b543ff1b-aefc-4d5a-a204-dd78c5a3d400" />
-
-<img width="373" height="111" alt="image" src="https://github.com/user-attachments/assets/771da4f4-ce10-4dca-91ea-c02761be6ced" />
+<img width="213" height="96" alt="Screenshot 2026-10-29 150353" src="https://github.com/user-attachments/assets/2320cce6-fc3a-4496-859e-cf443c14a687" />
 
 ---
  
 ### 5. Validasi Form Pendaftaran
  
-Membuat form pendaftaran (`#formPendaftaran`) dengan field Nama lengkap, Email, dan Usia (17-100). Atribut `novalidate` dipakai agar validasi dilakukan sendiri oleh JavaScript. Pada event `submit`, `event.preventDefault()` mencegah reload halaman, lalu input divalidasi:
- 
-- Nama tidak boleh kosong.
-- Email harus sesuai format (regex).
-- Usia harus berupa bilangan bulat 17-100.
-Jika semua valid, pesan "Validasi berhasil. Form siap diproses." ditampilkan dan form di-reset.
- 
-<img width="836" height="300" alt="image" src="https://github.com/user-attachments/assets/5b752197-4297-48b1-8ec5-d8f9c9bbd227" />
-<img width="842" height="452" alt="image" src="https://github.com/user-attachments/assets/eb649bce-e2d6-4aff-8e62-1182dd9cf323" />
+<img width="458" height="143" alt="Screenshot 2026-10-29 151443" src="https://github.com/user-attachments/assets/d7194301-7bb4-4abb-b80e-4f25c09c3e96" />
+
+<img width="479" height="371" alt="Screenshot 2026-10-29 151505" src="https://github.com/user-attachments/assets/729977da-4c2f-4df7-a246-b026b3414343" />
 
 Hasil di browser:
  
 - Input valid → muncul pesan "Validasi berhasil. Formulir siap diproses."
 - Email tidak valid (`emailtidakvalid`) → muncul pesan "Masukkan email yang valid."
-<img width="859" height="60" alt="image" src="https://github.com/user-attachments/assets/2963774f-0279-43ee-9ab6-015bdefbcd9f" />
-<img width="872" height="66" alt="image" src="https://github.com/user-attachments/assets/6b95d000-82cb-4824-a014-705a9df52636" />
-<img width="881" height="81" alt="image" src="https://github.com/user-attachments/assets/c40f39bf-f983-43bd-ae15-3001b58c9325" />
+<img width="385" height="17" alt="Screenshot 2026-10-29 151103" src="https://github.com/user-attachments/assets/6ae2d70d-3906-4547-ad29-7d8baafe95c0" />
 
-<img width="881" height="109" alt="image" src="https://github.com/user-attachments/assets/7996638a-a2af-4e83-882f-3be377b6a98c" />
+<img width="385" height="19" alt="Screenshot 2026-10-29 151131" src="https://github.com/user-attachments/assets/9620c3fd-ee88-48ac-be8d-d44ce45ee3d2" />
+
+<img width="383" height="39" alt="Screenshot 2026-10-29 151143" src="https://github.com/user-attachments/assets/d76b8dd3-682f-4973-bbf6-482104bbc34c" />
+
+<img width="391" height="41" alt="Screenshot 2026-10-29 151226" src="https://github.com/user-attachments/assets/ac7da788-a352-4a52-a46f-511977a0e1cb" />
 
 ---
  
 ### 6. Daftar Tugas Sederhana (To-do List)
  
-Membuat `<section>` berisi input `#inputTugas`, tombol `#tambahTugas`, pesan `#pesanTugas`, dan daftar `<ul id="daftarTugas">`. Saat tombol "Tambah" diklik:
- 
-- Jika input kosong → muncul pesan "Tulis tugas terlebih dahulu."
-- Jika terisi → dibuat elemen `<li>` baru dengan `createElement()` berisi teks tugas dan tombol "Tandai selesai".
-- Tombol "Tandai selesai" men-*toggle* class `selesai` (teks dicoret) dan mengubah label tombol menjadi "Batalkan selesai".
-<img width="540" height="261" alt="image" src="https://github.com/user-attachments/assets/d653425b-b589-4437-b0cf-739c4f0ab127" />
+<img width="399" height="113" alt="Screenshot 2026-10-29 151906" src="https://github.com/user-attachments/assets/25ee086d-61c7-4d17-9bde-324ee7fd2a65" />
 
-<img width="714" height="428" alt="image" src="https://github.com/user-attachments/assets/dcedff29-26ba-4c54-a9c9-9722ce26d58c" />
+<img width="449" height="400" alt="Screenshot 2026-10-29 151806" src="https://github.com/user-attachments/assets/76eb5761-90d0-49e6-894b-276ffadf58a8" />
 
 Hasil di browser:
-<img width="424" height="118" alt="image" src="https://github.com/user-attachments/assets/2cd81823-062a-4b56-bf6d-22d79126d4b6" />
-<img width="388" height="185" alt="image" src="https://github.com/user-attachments/assets/0c9f6522-747c-4b9a-a86e-bedada92b9b6" />
-<img width="364" height="167" alt="image" src="https://github.com/user-attachments/assets/16554ead-e7a9-49e7-92fc-e3aa55d43e08" />
+<img width="214" height="58" alt="Screenshot 2026-10-29 151921" src="https://github.com/user-attachments/assets/1204740e-b27c-4b1c-92b3-ba58592843e6" />
+
+<img width="202" height="92" alt="Screenshot 2026-10-29 151947" src="https://github.com/user-attachments/assets/9f405f56-d972-4d85-8a0b-5ba200f14b0e" />
+
+<img width="220" height="104" alt="Screenshot 2026-10-29 151955" src="https://github.com/user-attachments/assets/7ef886e1-aa8a-4b93-82be-eee57227af71" />
 
 ---
  
 ## Mini Project: Form Pendaftaran Workshop
- 
-Mini project berada di folder `MiniProject/` dan berisi form pendaftaran workshop dengan fitur:
- 
-- Field **Nama Lengkap**, **Alamat Email**, **Pilih Sesi** (Sesi Pagi 08:00 - 12:00 / Sesi Siang 13:00 - 17:00), dan **Ringkasan / Alasan Mengikuti** (textarea).
-- **Penghitung karakter** pada textarea secara langsung menggunakan event `input` (maksimal 200 karakter, warna berubah merah jika melebihi batas).
-- **Validasi** pada event `submit` dengan `preventDefault()` untuk nama, email, pilihan sesi, dan panjang alasan.
-- **Pesan notifikasi** sukses (`alert-success`) atau gagal (`alert-error`).
-- **Tombol Reset** yang membersihkan input, pesan error, dan hitungan karakter melalui event `reset`.
-<img width="536" height="375" alt="image" src="https://github.com/user-attachments/assets/db8cf97b-d709-40a7-a982-b6e67429e40a" />
 
-<img width="518" height="372" alt="image" src="https://github.com/user-attachments/assets/31f15351-a116-4897-adae-c29364aa5e8a" />
+<img width="627" height="491" alt="Screenshot 2026-10-29 163103" src="https://github.com/user-attachments/assets/b179bfbc-5019-4d67-903c-147cec6b9f63" />
 
-<img width="394" height="511" alt="image" src="https://github.com/user-attachments/assets/64d69cb9-fa87-4a35-9d8c-1b4251d2ea1b" />
+<img width="595" height="386" alt="Screenshot 2026-10-29 163125" src="https://github.com/user-attachments/assets/4a5540f5-a3ac-44b9-b101-eb5c90a51ab2" />
+
+<img width="593" height="191" alt="Screenshot 2026-10-29 163140" src="https://github.com/user-attachments/assets/d832a2da-c134-4798-965f-b0d6f0695622" />
 
 Code Script.Js
 ---
-<img width="561" height="535" alt="image" src="https://github.com/user-attachments/assets/af902af8-d62a-45a4-87b8-69686bd94bc8" />
+<img width="624" height="491" alt="Screenshot 2026-10-29 163315" src="https://github.com/user-attachments/assets/af89478e-e366-440c-ac12-14b538d678dd" />
+<img width="617" height="461" alt="Screenshot 2026-10-29 163332" src="https://github.com/user-attachments/assets/8d5aaefd-7c94-4726-b3ee-67d5fd7c705d" />
+<img width="611" height="464" alt="Screenshot 2026-10-29 163350" src="https://github.com/user-attachments/assets/e74838da-3136-469b-986b-3cdb26b4f022" />
+<img width="625" height="160" alt="Screenshot 2026-10-29 163403" src="https://github.com/user-attachments/assets/dca204a4-c55d-4932-b879-4f2619d40f57" />
+
+**Code Style.css**
+<img width="626" height="488" alt="Screenshot 2026-10-29 163611" src="https://github.com/user-attachments/assets/c1fa1938-b6c8-4db5-a102-f6d1b399aec2" />
+<img width="617" height="459" alt="Screenshot 2026-10-29 163631" src="https://github.com/user-attachments/assets/fb02ba70-661d-4866-b8e6-84430c3cd8ef" />
+<img width="614" height="445" alt="Screenshot 2026-10-29 163647" src="https://github.com/user-attachments/assets/6c1f4c54-019e-4a89-ab01-eb9f55431572" />
+<img width="623" height="419" alt="Screenshot 2026-10-29 163703" src="https://github.com/user-attachments/assets/dd50df16-020e-406d-920b-b6d5c7ec0a8e" />
 
 
 Hasil tampilan di browser (desktop):
 --- 
-<img width="743" height="329" alt="image" src="https://github.com/user-attachments/assets/1163f9b1-9c0f-4bdb-8866-88977560d45a" />
-<img width="414" height="439" alt="image" src="https://github.com/user-attachments/assets/76c9a554-03a5-47ad-ba84-94a19d8c0a69" />
+<img width="959" height="535" alt="Screenshot 2026-10-29 155038" src="https://github.com/user-attachments/assets/5f0a8224-8341-4870-9a40-c0468e73cb83" />
 
-
-Hasil tampilan responsif (mobile) saat validasi gagal karena alasan melebihi 200 karakter:
----
- <img width="999" height="525" alt="image" src="https://github.com/user-attachments/assets/1aa8af81-1ff6-49fb-8a3f-f95aeecccf69" />
+<img width="959" height="536" alt="Screenshot 2026-10-29 155129" src="https://github.com/user-attachments/assets/d44722f5-091e-4771-92d5-e28ce614c3b5" />
 
 ---
  
@@ -224,11 +178,13 @@ Hasil tampilan responsif (mobile) saat validasi gagal karena alasan melebihi 200
  
 Setiap item tugas diberi tombol "Hapus" (class `btn-hapus`). Saat diklik, item dihapus dari daftar dan muncul pesan "Tugas dihapus."
  
-<img width="767" height="544" alt="image" src="https://github.com/user-attachments/assets/25e2fc0e-671d-4741-9e49-98113dab3289" />
+<img width="427" height="238" alt="Screenshot 2026-10-29 152221" src="https://github.com/user-attachments/assets/2e7304d6-9ee3-46a2-9518-5c1010e28e7e" />
+
 
 code Script.js
 ---
-<img width="780" height="296" alt="image" src="https://github.com/user-attachments/assets/320beecc-2108-4f2b-89b6-4950daa63555" />
+<img width="423" height="246" alt="Screenshot 2026-10-29 153149" src="https://github.com/user-attachments/assets/0b08525c-eb95-40fc-8a8c-fb400f9bd4fe" />
+
 
 Sebelum dihapus:
 ---
@@ -252,11 +208,11 @@ Code script.Js
 
 Tampilan pilihan sesi pada mobile
 --
-<img width="417" height="182" alt="image" src="https://github.com/user-attachments/assets/bf9f6aa3-21a7-4dce-84a4-fe723ec473ff" />
+<img width="279" height="113" alt="Screenshot 2026-10-29 164241" src="https://github.com/user-attachments/assets/08326fbc-777b-4b35-90a4-4af95e8f1005" />
 
 Dropdown pada From Sesi Workshop
 ---
-<img width="215" height="391" alt="image" src="https://github.com/user-attachments/assets/8f57ce8e-12ba-4eb0-b6fe-394d5a31f813" />
+<img width="280" height="341" alt="Screenshot 2026-10-29 164424" src="https://github.com/user-attachments/assets/dfd10ead-10dc-4cfc-8b56-5b41691ec7d7" />
 
 
 
@@ -295,23 +251,3 @@ Tag `<script src="script.js">` dipindahkan ke dalam `<head>` **tanpa** atribut `
 Error terjadi karena script dijalankan sebelum elemen HTML selesai dimuat, sehingga `getElementById()` mengembalikan `null`. Solusinya adalah meletakkan script di akhir `<body>` atau menambahkan atribut `defer` pada tag script.
  
 <img width="827" height="334" alt="image" src="https://github.com/user-attachments/assets/7ca377bf-0768-4b60-822e-84c52d3ddbc6" />
-
----
- 
-## Pertanyaan Evaluasi
- 
-1. **DOM**: Struktur dokumen HTML yang memungkinkan JavaScript mengubah isi atau gaya web secara dinamis tanpa reload halaman.
-2. **Pemilih elemen**:
-   - `getElementById()`: mengambil 1 elemen spesifik melalui atribut ID.
-   - `querySelector()`: mengambil 1 elemen pertama berdasarkan selector CSS.
-   - `querySelectorAll()`: mengambil semua elemen berdasarkan selector CSS (berupa kumpulan data / NodeList).
-3. **`addEventListener()`**: perintah untuk mendeteksi aksi pada elemen web. Tiga contoh event: `click`, `input`, dan `submit`.
-4. **`preventDefault()`**: mencegah perilaku bawaan browser, yaitu reload halaman saat formulir di-submit.
-5. **`textContent` vs `innerHTML`**: `textContent` menyisipkan teks mentah (aman), sedangkan `innerHTML` mengeksekusi tag HTML sehingga rentan terhadap serangan XSS.
-6. **`classList.toggle()`**: bekerja seperti saklar on/off, yaitu menambah class CSS jika belum ada dan menghapusnya jika sudah ada.
-7. **3 skenario validasi**: menguji input kosong, menguji format penulisan yang salah (misalnya email), dan menguji batasan jumlah karakter input.
----
- 
-## Kesimpulan
- 
-Pada praktikum ini telah dipelajari cara memanipulasi DOM menggunakan JavaScript, mulai dari memilih elemen, mengubah teks dengan `textContent`, mengubah class dan gaya dengan `classList`, hingga menangani event `click`, `input`, `submit`, dan `reset`. Selain itu dibuat juga validasi form, To-do List dinamis, dan Mini Project Form Pendaftaran Workshop. Dari eksperimen mandiri juga dipahami bahwa urutan pemuatan script berpengaruh terhadap keberhasilan akses elemen DOM, sehingga script perlu diletakkan di akhir `<body>` atau memakai atribut `defer`.
